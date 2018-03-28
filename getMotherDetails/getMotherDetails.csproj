@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{81009348-EEA4-43FA-8A46-316A90AE2C9A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>getMotherDetails</RootNamespace>
+    <AssemblyName>getMotherDetails</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="antlr.runtime, Version=2.7.7.1, Culture=neutral, PublicKeyToken=0f493c87b190d7e9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr2.Runtime.2.7.7.02\lib\antlr.runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\1962\smsService\SMS1962\SMS1962\bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\UP\ALS_CASEUpdate\UpdateKmsservice\Bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ANCDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GetChildClassDetails.cs" />
+    <Compile Include="getMotherDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="getMotherDetails.Designer.cs">
+      <DependentUpon>getMotherDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelperClass.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MothersDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PregnencyDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\GVK_ANCDetails\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\GVK_ChildDetails\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\GVK_PostEventDetails\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\GVK_PregancyDetails\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\GVK_RegistrationDetails\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\GVK_UPDATE_SyncDetails\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="getMotherDetails.resx">
+      <DependentUpon>getMotherDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://kcrkit.telangana.gov.in/102Integration/Services/102Integration.asmx%3fop=Get_ANCDetails">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GVK_ANCDetails\</RelPath>
+      <UpdateFromURL>https://kcrkit.telangana.gov.in/102Integration/Services/102Integration.asmx%3fop=Get_ANCDetails</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>getMotherDetails_GVK_ANCDetails__102Integration</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://kcrkit.telangana.gov.in/102Integration/Services/102Integration.asmx%3fop=Get_ChildDetails">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GVK_ChildDetails\</RelPath>
+      <UpdateFromURL>https://kcrkit.telangana.gov.in/102Integration/Services/102Integration.asmx%3fop=Get_ChildDetails</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>getMotherDetails_GVK_ChildDetails__102Integration</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://kcrkit.telangana.gov.in/102Integration/Services/102Integration.asmx%3fop=Get_PregancyDetails">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GVK_PregancyDetails\</RelPath>
+      <UpdateFromURL>https://kcrkit.telangana.gov.in/102Integration/Services/102Integration.asmx%3fop=Get_PregancyDetails</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>getMotherDetails_GVK_PregancyDetails__102Integration</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://kcrkit.telangana.gov.in/102Integration/Services/102Integration.asmx%3fop=Get_RegistrationDetails">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GVK_RegistrationDetails\</RelPath>
+      <UpdateFromURL>https://kcrkit.telangana.gov.in/102Integration/Services/102Integration.asmx%3fop=Get_RegistrationDetails</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>getMotherDetails_GVK_RegistrationDetails__102Integration</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://kcrkit.telangana.gov.in/102Integration/Services/102Integration.asmx%3fop=PostEventDetails">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GVK_PostEventDetails\</RelPath>
+      <UpdateFromURL>https://kcrkit.telangana.gov.in/102Integration/Services/102Integration.asmx%3fop=PostEventDetails</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>getMotherDetails_GVK_PostEventDetails__102Integration</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://kcrkit.telangana.gov.in/102Integration/Services/102Integration.asmx%3fop=Update_SyncDetails">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GVK_UPDATE_SyncDetails\</RelPath>
+      <UpdateFromURL>https://kcrkit.telangana.gov.in/102Integration/Services/102Integration.asmx%3fop=Update_SyncDetails</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>getMotherDetails_GVK_UPDATE_SyncDetails__102Integration</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\GVK_ANCDetails\102Integration.wsdl" />
+    <None Include="Web References\GVK_ANCDetails\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\GVK_ChildDetails\102Integration.wsdl" />
+    <None Include="Web References\GVK_ChildDetails\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\GVK_PostEventDetails\102Integration.wsdl" />
+    <None Include="Web References\GVK_PostEventDetails\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\GVK_PregancyDetails\102Integration.wsdl" />
+    <None Include="Web References\GVK_PregancyDetails\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\GVK_RegistrationDetails\102Integration.wsdl" />
+    <None Include="Web References\GVK_RegistrationDetails\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\GVK_UPDATE_SyncDetails\102Integration.wsdl" />
+    <None Include="Web References\GVK_UPDATE_SyncDetails\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\GVK_ChildDetails\102Integration.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\GVK_PregancyDetails\102Integration.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\GVK_ANCDetails\102Integration.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\GVK_RegistrationDetails\102Integration.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\GVK_UPDATE_SyncDetails\102Integration.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\GVK_PostEventDetails\102Integration.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

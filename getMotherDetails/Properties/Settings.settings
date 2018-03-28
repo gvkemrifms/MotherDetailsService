@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="getMotherDetails.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="getMotherDetails_GVK_ChildDetails__102Integration" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://kcrkit.telangana.gov.in/102Integration/Services/102Integration.asmx</Value>
+    </Setting>
+    <Setting Name="getMotherDetails_GVK_PregancyDetails__102Integration" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://kcrkit.telangana.gov.in/102Integration/Services/102Integration.asmx</Value>
+    </Setting>
+    <Setting Name="getMotherDetails_GVK_ANCDetails__102Integration" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://kcrkit.telangana.gov.in/102Integration/Services/102Integration.asmx</Value>
+    </Setting>
+    <Setting Name="getMotherDetails_GVK_RegistrationDetails__102Integration" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://kcrkit.telangana.gov.in/102Integration/Services/102Integration.asmx</Value>
+    </Setting>
+    <Setting Name="getMotherDetails_GVK_UPDATE_SyncDetails__102Integration" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://kcrkit.telangana.gov.in/102Integration/Services/102Integration.asmx</Value>
+    </Setting>
+    <Setting Name="getMotherDetails_GVK_PostEventDetails__102Integration" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://kcrkit.telangana.gov.in/102Integration/Services/102Integration.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

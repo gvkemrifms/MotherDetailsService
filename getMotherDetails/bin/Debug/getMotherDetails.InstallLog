@@ -1,0 +1,13 @@
+﻿Installing assembly 'F:\Services\getMotherDetails_changed_1133\getMotherDetails\getMotherDetails\bin\Debug\getMotherDetails.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = F:\Services\getMotherDetails_changed_1133\getMotherDetails\getMotherDetails\bin\Debug\getMotherDetails.exe
+   logfile = F:\Services\getMotherDetails_changed_1133\getMotherDetails\getMotherDetails\bin\Debug\getMotherDetails.InstallLog
+Installing service getMotherDetails...
+Service getMotherDetails has been successfully installed.
+Creating EventLog source getMotherDetails in log Application...
+Committing assembly 'F:\Services\getMotherDetails_changed_1133\getMotherDetails\getMotherDetails\bin\Debug\getMotherDetails.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = F:\Services\getMotherDetails_changed_1133\getMotherDetails\getMotherDetails\bin\Debug\getMotherDetails.exe
+   logfile = F:\Services\getMotherDetails_changed_1133\getMotherDetails\getMotherDetails\bin\Debug\getMotherDetails.InstallLog

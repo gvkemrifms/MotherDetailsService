@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Get_RegistrationDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_RegistrationDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_RegistrationDetailsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ANCDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ANCDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ANCDetailsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PregancyDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PregancyDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_PregancyDetailsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ChildDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ChildDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ChildDetailsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_SyncDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BatchID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Synchdate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Response" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_SyncDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Update_SyncDetailsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostEventDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MotherID" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="PregnancyID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChildID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EventTypeID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EventID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="PickupTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DropTime" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DistrictID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="HCID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="AdhaarFlag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Vehicleno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Calls" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogUserId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostEventDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PostEventDetailsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_RegistrationDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_RegistrationDetails" />
+  </wsdl:message>
+  <wsdl:message name="Get_RegistrationDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_RegistrationDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ANCDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ANCDetails" />
+  </wsdl:message>
+  <wsdl:message name="Get_ANCDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ANCDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_PregancyDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_PregancyDetails" />
+  </wsdl:message>
+  <wsdl:message name="Get_PregancyDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_PregancyDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ChildDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ChildDetails" />
+  </wsdl:message>
+  <wsdl:message name="Get_ChildDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ChildDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update_SyncDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:Update_SyncDetails" />
+  </wsdl:message>
+  <wsdl:message name="Update_SyncDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:Update_SyncDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PostEventDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:PostEventDetails" />
+  </wsdl:message>
+  <wsdl:message name="PostEventDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:PostEventDetailsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="_102IntegrationSoap">
+    <wsdl:operation name="Get_RegistrationDetails">
+      <wsdl:input message="tns:Get_RegistrationDetailsSoapIn" />
+      <wsdl:output message="tns:Get_RegistrationDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ANCDetails">
+      <wsdl:input message="tns:Get_ANCDetailsSoapIn" />
+      <wsdl:output message="tns:Get_ANCDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_PregancyDetails">
+      <wsdl:input message="tns:Get_PregancyDetailsSoapIn" />
+      <wsdl:output message="tns:Get_PregancyDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ChildDetails">
+      <wsdl:input message="tns:Get_ChildDetailsSoapIn" />
+      <wsdl:output message="tns:Get_ChildDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_SyncDetails">
+      <wsdl:input message="tns:Update_SyncDetailsSoapIn" />
+      <wsdl:output message="tns:Update_SyncDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostEventDetails">
+      <wsdl:input message="tns:PostEventDetailsSoapIn" />
+      <wsdl:output message="tns:PostEventDetailsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="_102IntegrationSoap" type="tns:_102IntegrationSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_RegistrationDetails">
+      <soap:operation soapAction="http://tempuri.org/Get_RegistrationDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ANCDetails">
+      <soap:operation soapAction="http://tempuri.org/Get_ANCDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PregancyDetails">
+      <soap:operation soapAction="http://tempuri.org/Get_PregancyDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ChildDetails">
+      <soap:operation soapAction="http://tempuri.org/Get_ChildDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_SyncDetails">
+      <soap:operation soapAction="http://tempuri.org/Update_SyncDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostEventDetails">
+      <soap:operation soapAction="http://tempuri.org/PostEventDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="_102IntegrationSoap12" type="tns:_102IntegrationSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_RegistrationDetails">
+      <soap12:operation soapAction="http://tempuri.org/Get_RegistrationDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ANCDetails">
+      <soap12:operation soapAction="http://tempuri.org/Get_ANCDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PregancyDetails">
+      <soap12:operation soapAction="http://tempuri.org/Get_PregancyDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ChildDetails">
+      <soap12:operation soapAction="http://tempuri.org/Get_ChildDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_SyncDetails">
+      <soap12:operation soapAction="http://tempuri.org/Update_SyncDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostEventDetails">
+      <soap12:operation soapAction="http://tempuri.org/PostEventDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="_102Integration">
+    <wsdl:port name="_102IntegrationSoap" binding="tns:_102IntegrationSoap">
+      <soap:address location="https://kcrkit.telangana.gov.in/102Integration/Services/102Integration.asmx" />
+    </wsdl:port>
+    <wsdl:port name="_102IntegrationSoap12" binding="tns:_102IntegrationSoap12">
+      <soap12:address location="https://kcrkit.telangana.gov.in/102Integration/Services/102Integration.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
