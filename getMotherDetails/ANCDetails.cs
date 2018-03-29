@@ -4,7 +4,7 @@ using System.Data;
 
 namespace getMotherDetails
 {
-   public class AncDetails
+    public class AncDetails
     {
         private readonly HelperClass _helper = new HelperClass();
         public void GetAncDetails(DataTable dtWsSyncDetails)

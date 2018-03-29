@@ -133,7 +133,7 @@ namespace getMotherDetails
                 traceService(ex.ToString());
             }
         }
-        
+
         public int ExecuteInsertStatement(string insertStmt)
         {
             try
@@ -171,7 +171,7 @@ namespace getMotherDetails
                 return 0;
             }
         }
-    
+
         public void InsertUpdatePregencyDetails(DataTable dta, int count)
         {
             try
@@ -313,13 +313,13 @@ namespace getMotherDetails
         }
         public void PushPostEventDetails(DataTable dtWsSyncDetails)
         {
-            int eventTypeId=0;
-            int eventId=0;
-            int districtId=0;
-            int hcid=0;
+            int eventTypeId = 0;
+            int eventId = 0;
+            int districtId = 0;
+            int hcid = 0;
             if (dtWsSyncDetails.Rows[0]["pushPostEventDetails"].ToString() == "1")
             {
-                
+
                 try
                 {
                     var cmd = " SELECT bcd.beneficiary_id beneficiary_id, pd.pregnancyid pregnancyid, IFNULL(cdr.childid, '') childid, ";
@@ -361,7 +361,7 @@ namespace getMotherDetails
                                 // ignored
                             }
 
-                          
+
                             TraceService("Posted Values to PostEventDetails are ::" + "KCRKIT" + " ~ " + "102@KCRKIT" + " ~ " + motherId + " ~ " + pregnancyId + " ~ " + childId + " ~ " + eventTypeId + " ~ " + eventId + " ~ " + pickupTime + " ~ " + dropTime + " ~ " + districtId + " ~ " + hcid + " ~ " + adhaarFlag + " ~ " + vehicleno + " ~ " + calls + " ~ " + logUserId);
                             try
                             {
@@ -405,10 +405,10 @@ namespace getMotherDetails
             using (var connection = new MySqlConnection(connectionString))
             {
                 var dataAdapter =
-                    new MySqlDataAdapter {SelectCommand = new MySqlCommand(selectStmt, connection)};
+                    new MySqlDataAdapter { SelectCommand = new MySqlCommand(selectStmt, connection) };
                 try
                 {
-                  
+
                     connection.Open();
                     dataAdapter.Fill(dtSyncData);
                     return dtSyncData;
@@ -667,6 +667,6 @@ namespace getMotherDetails
             }
         }
 
-        
+
     }
 }

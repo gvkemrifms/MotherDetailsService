@@ -45,7 +45,7 @@ namespace getMotherDetails
                             var us = new GVK_UPDATE_SyncDetails._102Integration();
                             string res = us.Update_SyncDetails("KCRKIT", "102@KCRKIT", dta.Rows[count - 1]["BatchId"].ToString(), DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "1");
                             _helper.TraceService("Response after updation for batch id :::" + dta.Rows[count - 1]["BatchId"] + ":::" + res);
-                            
+
                         }
                         else
                         {
