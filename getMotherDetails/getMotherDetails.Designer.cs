@@ -1,6 +1,6 @@
 ﻿namespace getMotherDetails
 {
-    partial class getMotherDetails
+    partial class GetMotherDetails
     {
         /// <summary> 
         /// Required designer variable.

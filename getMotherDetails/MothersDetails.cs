@@ -21,7 +21,7 @@ namespace getMotherDetails
                     GVK_RegistrationDetails._102Integration dt = new GVK_RegistrationDetails._102Integration();
                     string data = dt.Get_RegistrationDetails("KCRKIT", "102@KCRKIT");
                     string updatestmt = "update wssyncstatus set status ='Processing', lastcheckdate = now(),currentStatus = 'GetMotherData' where isactive=1;";
-                    helper.executeInsertStatement(updatestmt);
+                    helper.ExecuteInsertStatement(updatestmt);
                     helper.TraceService_result(data);
                     DataTable dta = (DataTable)JsonConvert.DeserializeObject(data, (typeof(DataTable)));
                     //  if( 

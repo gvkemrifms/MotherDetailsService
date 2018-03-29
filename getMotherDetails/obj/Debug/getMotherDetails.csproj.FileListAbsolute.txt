@@ -25,7 +25,6 @@ D:\Source\Telangana\getMotherDetails_changed_1133\getMotherDetails_changed_1133\
 E:\GVK\Vinod\Ts102 getmother details service\getMotherDetails_changed_1133\getMotherDetails\getMotherDetails\bin\Debug\getMotherDetails.exe.config
 E:\GVK\Vinod\Ts102 getmother details service\getMotherDetails_changed_1133\getMotherDetails\getMotherDetails\obj\Debug\getMotherDetails.exe
 E:\GVK\Vinod\Ts102 getmother details service\getMotherDetails_changed_1133\getMotherDetails\getMotherDetails\obj\Debug\getMotherDetails.pdb
-E:\GVK\Vinod\Ts102 getmother details service\getMotherDetails_changed_1133\getMotherDetails\getMotherDetails\obj\Debug\getMotherDetails.csprojResolveAssemblyReference.cache
 E:\GVK\Vinod\Ts102 getmother details service\getMotherDetails_changed_1133\getMotherDetails\getMotherDetails\obj\Debug\getMotherDetails.getMotherDetails.resources
 E:\GVK\Vinod\Ts102 getmother details service\getMotherDetails_changed_1133\getMotherDetails\getMotherDetails\obj\Debug\getMotherDetails.ProjectInstaller.resources
 E:\GVK\Vinod\Ts102 getmother details service\getMotherDetails_changed_1133\getMotherDetails\getMotherDetails\obj\Debug\getMotherDetails.csproj.GenerateResource.Cache

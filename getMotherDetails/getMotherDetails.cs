@@ -1,24 +1,25 @@
-﻿using MySql.Data.MySqlClient;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Data;
 using System.Globalization;
-using System.IO;
 using System.ServiceProcess;
 using System.Timers;
 
 namespace getMotherDetails
 {
-    public partial class getMotherDetails:ServiceBase
+    public partial class GetMotherDetails:ServiceBase
     {
-        HelperClass helper = new HelperClass();
-        MothersDetails motherDetails = new MothersDetails();
+        private readonly HelperClass _helper = new HelperClass();
+
+        private readonly MothersDetails _motherDetails = new MothersDetails();
+        #region commentedcode
         //  string connectionString = "server=localhost;userid=root;password=1234;database=emri;Convert Zero Datetime=True";
         //string connectionString = "server=10.11.0.16;userid=emri;password=emri;database=emri;Convert Zero Datetime=True";
         //string dateformat = "MM/dd/yyyy HH:mm:ss";
         //string defDate = "1900-01-01 00:00";
-        Timer timer = new Timer();
-        public getMotherDetails()
+#endregion
+        public Timer Timer { get; } = new Timer();
+
+        public GetMotherDetails()
         {
             try
             {
@@ -26,34 +27,34 @@ namespace getMotherDetails
             }
             catch(Exception ex)
             {
-                helper.TraceService_abnormal("InitializeComponent -- " + ex.ToString());
+                _helper.TraceService_abnormal("InitializeComponent -- " + ex);
             }
         }
         private void OnElapsedTime(object source, ElapsedEventArgs e)
         {
             try
             {
-                helper.TraceService("Another entry at :::" + DateTime.Now + "::OnElapsedTime::" + ":::ITS NOT EXCEPTION");
+                _helper.TraceService("Another entry at :::" + DateTime.Now + "::OnElapsedTime::" + ":::ITS NOT EXCEPTION");
                 int hourMinute = Convert.ToInt32(DateTime.Now.ToString("HH"));
                 if (hourMinute > 4)
                 {
-                    DataTable dt = helper.executeSelectStmt("select * from wssyncstatus where isactive = 1;");
+                    DataTable dt = _helper.ExecuteSelectStmt("select * from wssyncstatus where isactive = 1;");
                     if (dt.Rows.Count > 0)
                     {
                         string status = dt.Rows[0]["status"].ToString();
-                        if (status == "Stopped")
+                        if (string.Equals(status, "Stopped", StringComparison.OrdinalIgnoreCase))
                         {
-                            DateTime dtCheck = Convert.ToDateTime(dt.Rows[0]["date"].ToString());
-                            double diff2 = Convert.ToDouble((DateTime.Now - dtCheck).TotalDays.ToString());
+                            var dtCheck = Convert.ToDateTime(dt.Rows[0]["date"].ToString());
+                            double diff2 = Convert.ToDouble((DateTime.Now - dtCheck).TotalDays.ToString(CultureInfo.InvariantCulture));
 
                             if (diff2 > 0.99)
                             {
-                                motherDetails.GetMotherData(dt);
+                                _motherDetails.GetMotherData(dt);
                             }
                             else
                             {
                                 string updatestmt = "update wssyncstatus set  lastcheckdate = now(),remarks= 'Data is already processed for: " + DateTime.Now.ToString("yyyy-MM-dd") + "' where isactive=1;";
-                                helper.executeInsertStatement(updatestmt);
+                                _helper.ExecuteInsertStatement(updatestmt);
                             }
 
 
@@ -61,19 +62,19 @@ namespace getMotherDetails
                         else
                         {
                             string updatestmt = "update wssyncstatus set status ='Processing', lastcheckdate = now() where isactive=1;";
-                            helper.executeInsertStatement(updatestmt);
+                            _helper.ExecuteInsertStatement(updatestmt);
                         }
                     }
                 }
                 else
                 {
                     string updatestmt = "update wssyncstatus set lastcheckdate = now() where isactive=1;";
-                    helper.executeInsertStatement(updatestmt);
+                    _helper.ExecuteInsertStatement(updatestmt);
                 }
             }
             catch (Exception ex)
             {
-                helper.TraceService_abnormal("OnElapsedTime -- " + ex.ToString());
+                _helper.TraceService_abnormal("OnElapsedTime -- " + ex);
             }
 
 
@@ -84,20 +85,20 @@ namespace getMotherDetails
         {
             try
             {
-                helper.traceService("start service");
-                timer.Interval = TimeSpan.FromHours(12).TotalMinutes;
-                timer.Enabled = true;
-                timer.Start();
-                timer.Elapsed += new ElapsedEventHandler(OnElapsedTime);
+                _helper.traceService("start service");
+                Timer.Interval = TimeSpan.FromHours(12).TotalMinutes;
+                Timer.Enabled = true;
+                Timer.Start();
+                Timer.Elapsed += OnElapsedTime;
                
                 //      traceService("Delay time: " + dtDelay.Rows[0][0].ToString());
             }
             catch (Exception ex)
             {
-                helper.TraceService(ex.ToString() + "~~~~OnStart~~~~" + System.DateTime.Now.ToString());
+                _helper.TraceService(ex + "~~~~OnStart~~~~" + System.DateTime.Now.ToString(CultureInfo.InvariantCulture));
             }
         }
- 
+        #region codecomment
         //private void GetMotherData(DataTable dtWsSyncDetails)
         //{
         //    if (dtWsSyncDetails.Rows[0]["GetMotherData"].ToString() == "1")
@@ -876,11 +877,13 @@ namespace getMotherDetails
         //        connection.Close();
         //    }
         //}
+        #endregion
         protected override void OnStop()
         {
-            timer.Enabled = false;
-            helper.traceService("stopping service");
+            Timer.Enabled = false;
+            _helper.traceService("stopping service");
         }
+        #region commented
         //public void traceService(string content)
         //{
         //    try
@@ -990,5 +993,6 @@ namespace getMotherDetails
         //        traceService(ex.ToString());
         //    }
         //}
+#endregion
     }
 }
