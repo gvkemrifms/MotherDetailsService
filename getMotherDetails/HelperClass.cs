@@ -10,7 +10,7 @@ using System.Text;
 
 namespace getMotherDetails
 {
-    public class HelperClass: ServiceBase
+    public class HelperClass
     {
         GetChildClassDetails childDetails = new GetChildClassDetails();
         string connectionString = "server=10.11.0.16;userid=emri;password=emri;database=emri;Convert Zero Datetime=True";

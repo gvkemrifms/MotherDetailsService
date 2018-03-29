@@ -8,7 +8,7 @@ using System.Text;
 
 namespace getMotherDetails
 {
-    public class PregnencyDetails: ServiceBase
+    public class PregnencyDetails
     {
         HelperClass helper = new HelperClass();
         ANCDetails ancDetails = new ANCDetails();

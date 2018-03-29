@@ -8,7 +8,7 @@ using System.Text;
 
 namespace getMotherDetails
 {
-    public class MothersDetails: ServiceBase
+    public class MothersDetails
     {
         public void GetMotherData(DataTable dtWsSyncDetails)
         {

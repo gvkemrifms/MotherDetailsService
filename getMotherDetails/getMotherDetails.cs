@@ -9,7 +9,7 @@ using System.Timers;
 
 namespace getMotherDetails
 {
-    public partial class getMotherDetails : ServiceBase
+    public partial class getMotherDetails:ServiceBase
     {
         HelperClass helper = new HelperClass();
         MothersDetails motherDetails = new MothersDetails();

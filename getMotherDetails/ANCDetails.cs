@@ -8,7 +8,7 @@ using System.Text;
 
 namespace getMotherDetails
 {
-   public class ANCDetails: ServiceBase
+   public class ANCDetails
     {
         HelperClass helper = new HelperClass();
         public void GetANCDetails(DataTable dtWsSyncDetails)
